@@ -1,0 +1,111 @@
+Onboard-module
+1 : post	:	http://localhost:8080/poc_feedback/employee/addEmployeeData
+{
+        "employeeId": 106,
+        "employeeName": "Kajal",
+        "email": "kajal@gmail.com",
+        "designation": "softwareEngineer",
+        "grade": "E1",
+        "resourceType":"Experienced",
+        "DOJ": "20-06-2022",
+        "totalExp": 5.9,
+        "IRM": "xxx",
+        "currentLocation": "magarpatt",
+        "currentAllocation":"project",
+        "project": "jd",
+        "skills": [
+            {
+                "id": 1
+            },
+            {
+                "id": 2
+            }
+        ],
+        "doj": "16-06-2022",
+        "irm":"xxx"
+    }
+----------------------------------------------------------------------------------
+2 : Get : http://localhost:8080/poc_feedback/employee/getAllEmployeeData
+----------------------------------------------------------------------------------
+3 : Get : http://localhost:8080/poc_feedback/employee/getEmployeeData/5
+----------------------------------------------------------------------------------
+4: put : http://localhost:8080/poc_feedback/employee/updateEmployee/3
+{
+     "id" : 3,
+        "employeeId": 1052,
+        "employeeName": "rohit2",
+        "email": "kajal2@gmail.com",
+        "designation": "softwareEngineer2",
+        "grade": "E2",
+        "resourceType":"2-Experienced",
+        "DOJ": "20-06-2022",
+        "totalExp": 5.2,
+        "IRM": "xxx2",
+        "currentLocation": "2magarpatt",
+        "currentAllocation":"2project",
+        "project": "2jd",
+        "skills": [
+            {
+                "id": 1
+            }
+        ],
+        "doj": "16-06-2022",
+        "irm":"2xxx"
+    }
+----------------------------------------------------------------------------------
+5 : delete	:  http://localhost:8080/poc_feedback/employee/deleteEmployee/2
+----------------------------------------------------------------------------------
+6: get : http://localhost:8080/poc_feedback/employee/project
+----------------------------------------------------------------------------------
+7: get : http://localhost:8080/poc_feedback/employee/find-by-id-name/105/rohit
+----------------------------------------------------------------------------------
+8: get : http://localhost:8080/poc_feedback/employee/getSkillData
+----------------------------------------------------------------------------------
+9: post : http://localhost:8080/poc_feedback/employee/upload-employee-data
+
+key : file
+value : select file
+====================================================================================================================================
+====================================================================================================================================
+Feedback-module
+
+1 : Get mapping : http://localhost:8080/poc_feedback/feedback/api/allSkill
+---------------------------------------------------------------------------------------------------------------
+2: Get mapping : http://localhost:8080/poc_feedback/feedback/api/allEmployee
+---------------------------------------------------------------------------------------------------------------
+3: PostMapping : http://localhost:8080/poc_feedback/feedback/api/saveEmployeeFeedback
+{
+    "overallExperience" : 6,
+    "projectExperience" : 2,
+    "comments" : "Hello ddfkj dsjbsd skjdbf kjs",
+    "suggestion" : "as as  as das",
+    "employee" : {
+        "id" : 4
+    },
+    "employeeSkillsRatings" : [
+        {
+            "rating" : 4,
+            "remarks" : "remarks-test4",
+            "skill" : {
+                "id" : 1
+            }
+        },
+        {
+            "rating" : 1,
+            "remarks" : "remarks-test1",
+            "skill" : {
+                "id" : 2
+            }
+        }
+    ]
+}
+---------------------------------------------------------------------------------------------------------------
+4: GetMapping : http://localhost:8080/poc_feedback/feedback/api/allEmployeeFeedback
+---------------------------------------------------------------------------------------------------------------
+5: GetMapping : http://localhost:8080/poc_feedback/feedback/api/download-employee-feedback-template
+---------------------------------------------------------------------------------------------------------------
+6: PostMapping : http://localhost:8080/poc_feedback/feedback/api/upload-employee-feedback
+
+key : file
+value : select file
+====================================================================================================================================
